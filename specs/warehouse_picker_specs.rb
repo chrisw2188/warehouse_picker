@@ -17,7 +17,7 @@ def test_location_at_bay
   assert_equal("b5", location)
 end
 
-# # QUESTION 3
+# # # QUESTION 3
 
 def test_multiple_items
   items = multiple_items(["b5", "b6", "b10"])
@@ -28,30 +28,40 @@ end
 
 # # QUESTION 4
 
-# def test_multiple_bays
-#   items = multiple_bays(["shoe lace", "rusty nail", "leg warmers"])
-#   assert_equal(["c9", "c1", "c10"], items)
-# end
+def test_multiple_bays
+  items = multiple_bays(["shoe lace", "rusty nail", "leg warmers"])
+  assert_equal(["c9", "c1", "c10"], items)
+end
 
-# # def test_more_multiple_items
-# #   bays = multiple_bays
+# # QUESTION 5A
+# # see question 3
+
+# # QUESTION 5B
+
+def test_more_multiple_items
+    items = multiple_items(["b3", "c7", "c9", "a3"])
+    distance = multiple_items(["b3", "c7", "c9", "a3"])
+  assert_equal(["picture frame", "paint brush", "shoe lace", "blouse"], items[0])
+  assert_equal(15, distance[1])
+end
+
+# # QUESTION 6a
+
+def test_items_in_order
+  items = items_in_order(["shoe lace", "rusty nail", "leg warmers"])
+  assert_equal(["c1", "c9", "c10"], items)
+end
+
+# # QUESTION 6b
+
+def test_items_in_order_b
+  items = items_in_order(["hanger", "deodorant", "candy wrapper", "rubber band"])
+  assert_equal(["a10", "a4", "c8", "b9"], items)
+end
 
 
 
-# def test_more_multiple_items
-#     items = multiple_items(["b3", "c7", "c9", "a3"])
-#     # distance = multiple_items(["b3", "c7", "c9", "a3"])
-#   assert_equal(["picture frame", "paint brush", "shoe lace", "blouse"], 15)
-#   end
-
-#   def test_items_and_bays
-#       items = items_and_bays(["b3", "c7", "c9", "a3"])
-#       distance = items_and_bays(["b3", "c7", "c9", "a3"])
-#     assert_equal(["picture frame", "paint brush", "shoe lace", "blouse"], items)
-#     end
 
 
 
-
-
-  end
+end

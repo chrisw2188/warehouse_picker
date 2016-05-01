@@ -56,7 +56,7 @@ def location_at_bay(item)
 return result
 end
 
-# QUESTION 3
+# # QUESTION 3
 
 def multiple_items(bays)
 result = []
@@ -75,64 +75,51 @@ postion = []
   return result, distance
 end
 
-# QUESTION 4
 
-# def multiple_bays(items)
-#   result = []
-#     for item in items 
-#       for bay in WAREHOUSE
-#         if item == bay.values[0]
-#           result.push(bay.keys[0]) 
-#         end
-#       end
-#     end
-#     return result
-#   end
 
-# def multiple_bays(items)
-# result = []
-#   for item in items 
-#     for bay in WAREHOUSE
-#       if item == bay.values[0]
-#         result.push(bay.keys[0]) 
-#       end
-#     end
-#   end
-#   return result
-# end
+# # QUESTION 4
 
-# def tes(items)
-# postion = []
-# result = []
-#   for item in items 
-#     for bay in WAREHOUSE
-#       if item == bay.keys[0]
-#       result.push(bay.values[0])
-#         postion.push(WAREHOUSE.index(bay)) 
-#       end
-#     end
-#   end
-#   min = postion.min 
-#   max = postion.max
-#   distance = max - min
-#   return distance
-# end
+def multiple_bays(items)
+  result = []
+    for item in items 
+      for bay in WAREHOUSE
+        if item == bay.values[0]
+          result.push(bay.keys[0]) 
+        end
+      end
+    end
+    return result
+  end
 
-# def items_and_bays(items)
-#   return multiple_items(items),distance_between_bays(items)
-# end
+# # QUESTION 5
 
-# def multiple_bays(items)
-#   result = []
-#     for item in items 
-#       for item in WAREHOUSE
-#         if bay == item.values[0]
-#           result.push(item.keys[0]) 
-#         end
-#       end
-#     end
-#     return result
-#   end
+# # Same funtion used as for 3
+
+def items_in_order(items)
+  index = []
+  result = []
+    for item in items 
+      for bay in WAREHOUSE
+        if item == bay.values[0]
+          index.push(WAREHOUSE.index(bay))
+              sorted_index = index.sort
+        end
+      end
+    end
+  for postion in sorted_index
+    for slot in WAREHOUSE
+      if postion == WAREHOUSE.index(slot)
+        result.push(slot.keys[0])
+      end
+    end
+  end
+ return result
+end
+
+
+
+
+
 
 
 
